@@ -1,0 +1,7 @@
+@use './utils/variables' as *;
+
+h1 {
+    font-family: $font-display;
+    color: $color-text;
+    font-size: calc(4 * $spacing-unit);
+}
