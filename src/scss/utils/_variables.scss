@@ -1,0 +1,36 @@
+/* Цветавая палитра */
+
+$color-bg: #FAF8F5; // Фон
+$color-surface: #F0EBE1; // Карточки, ховеры
+$color-border: #D8CFC0; // Тонкие линии
+$color-text: #2C2825; // Основной текст
+$color-text-muted: #8A8177; //Дополнительный текст
+$color-accent: #B59A7A; // Акцентный цвет
+
+$font-primary: 'Inter', system-ui, -apple-system, sans-senrif; // Основной текст
+$font-display: 'Playfair Dispay', Geogria, serif; // Акцентный шрифт
+
+$border-thin: 0.5px; // ширина линий, границ
+$radius-sm: 2px; // закругление максимально маленькое
+$radius-md: 4px;
+
+$spacing-unit: 8px; // Бзаовый шаг (8px, 16px, 24px, 32px ...)
+
+$breakpoints: (
+    'sm': 576px,
+    'md': 768px,
+    'lg': 992px,
+    'xl': 1200px,
+    'xxl': 1400px
+);
+
+$container-max-widths: (
+    'sm': 540px,
+    'md': 720px,
+    'lg': 960px,
+    'xl': 1140px,
+    'xxl': 1320px
+);
+
+$grid-columns: 12;
+$grid-gutter: 24px;

@@ -1,0 +1,26 @@
+SMACSS
+ ^ - буква М - это модули
+
+1. Сборщик Vite ✓
+2. Иерархия файлов и папок ✓
+3. Шрифты подключить ✓
+4. Переменные цветов ✓
+5. Добавить сетки
+6. Добавить модули
+7. Состояние модулей
+
+# Установка заготовки шаблона
+npm create vite@latest grotex -- --template vanilla
+
+# SCSS Установка
+npm install -D sass
+
+# Шрифты внутри сборки
+npm install @fontsource/inter @fontsource/playfair-display
+
+base/ - базовые теги: h1, a, p, small, strong etc.
+layout/ - grid, col, row, padding, margin
+modules/ - buttons, cards, forms, accordion, gallery
+state/ - состояние элементов .is-active, .is-disabled, .is-expanded
+utils/ - Переменные, миксины и т.д.
+theme/ - есть, но делать не будем
