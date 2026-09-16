@@ -1,0 +1,55 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-primary;
+    background-color: $color-bg;
+    color: $color-text;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-display;
+    color: $color-text;
+}
+
+h1 {
+    font-size: calc(6 * $spacing-unit); // 48
+}
+
+h2 {
+    font-size: calc(4 * $spacing-unit); // 32
+}
+
+h3 {
+    font-size: calc(3 * $spacing-unit); // 24
+}
+
+h4, h5, h6 {
+    font-size: calc(2 * $spacing-unit); // 16
+    font-weight: 500;
+}
+
+small {
+    color: $color-text-muted;
+}
+
+a {
+    color: $color-accent;
+
+    @include smooth-transition(color);
+
+    &:hover {
+        color: $color-text;
+    }
+}
+
+nav a, .btn a {
+    text-decoration: none;
+}

@@ -1,0 +1,45 @@
+/* 
+col-1 col-2 ....col-10 col-12
+col-md-4 col-md-12
+col-sm-12
+*/
+
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: ($grid-gutter / 2);
+    padding-right: ($grid-gutter / 2);
+
+    @each $breakpoint, $max-width in $container-max-widths {
+        @include media($breakpoint) {
+            max-width: $max-width;
+        }
+    }
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat($grid-columns, 1fr);
+    gap: $grid-gutter;
+}
+
+.col {
+    grid-column: span $grid-columns;
+}
+
+@each $breakpoint in map-keys($breakpoints) {
+    @include media($breakpoint) {
+        // .col-{breakpoint}-{1-12}
+        @for $i from 1 through $grid-columns {
+            .col-#{$breakpoint}-#{$i} {
+                grid-column: span $i;
+            }
+        }
+
+        // .offset-{breakpoint}-{1-11}
+    }
+}
