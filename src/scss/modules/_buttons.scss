@@ -1,0 +1,8 @@
+@use '../utils/variables' as *;
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: $spacing-unit;
+    padding: $spacing-unit;
+}
