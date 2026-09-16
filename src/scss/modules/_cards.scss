@@ -20,6 +20,8 @@
   }
 
   &__text {
-    
+    color: $color-text-muted;
+    font-size: (2.4 * $spacing-unit);
+    line-height: 1.7;
   }
 }
