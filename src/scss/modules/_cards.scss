@@ -1,0 +1,25 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
+
+.card {
+  background-color: $color-bg;
+  padding: (3 * $spacing-unit); // 24 PX
+  border-radius: $radius-md;
+
+  @include thin-border();
+  @include smooth-transition();
+
+  &:hover {
+    border-color: $color-accent;
+    transform: translateY(-2px);
+  }
+
+  &__title {
+    font-size: (3 * $spacing-unit); // 24 px
+    margin-bottom: (2 * $spacing-unit); // 16 px
+  }
+
+  &__text {
+    
+  }
+}
