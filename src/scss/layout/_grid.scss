@@ -39,7 +39,17 @@ col-sm-12
                 grid-column: span $i;
             }
         }
-
         // .offset-{breakpoint}-{1-11}
+        @for $i from 1 through ($grid-columns - 1) {
+            .offset-#{$breakpoint}-#{$i} {
+                grid-column-start: $i + 1;
+            }
+        }
+        // .order-{breakpoint}-{1-12}
+        @for $i from 1 through $grid-columns {
+            .order-#{$breakpoint}-#{$i} {
+                order: $i;
+            }
+        }
     }
 }
